@@ -23,7 +23,7 @@ def pregunta_10():
     """
 
     # Carga del archivo
-    df = pd.read_csv('tbl0.tsv', sep='\t')
+    df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
     # Agregación por c1 y separación por :
     result = df.groupby('c1')['c2'].apply(lambda x: ':'.join(map(str, sorted(x)))).reset_index()

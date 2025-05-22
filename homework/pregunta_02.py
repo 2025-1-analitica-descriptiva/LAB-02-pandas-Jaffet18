@@ -18,7 +18,7 @@ def pregunta_02():
     """
 
     # Cargar el archivo tbl0.tsv
-    df = pd.read_csv('tbl0.tsv', sep='\t')
+    df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
     # Contar la cantidad de columnas
     num_columns = df.shape[1]

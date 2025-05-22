@@ -24,7 +24,7 @@ def pregunta_03():
     """
 
     # Cargar el archivo tbl0.tsv
-    df = pd.read_csv('tbl0.tsv', sep='\t')
+    df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
     # Contar la cantidad de registros por cada letra de la columna c1
     count_by_letter = df['c1'].value_counts()
