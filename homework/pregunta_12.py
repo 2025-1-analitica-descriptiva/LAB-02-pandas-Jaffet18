@@ -24,14 +24,13 @@ def pregunta_12():
     """
 
     # Carga del archivo
-    df = pd.read_csv('./files/input/tbl2.tsv', sep='\t')
-    
-    # Agregación por c0 y separación por ,
-    result = df.groupby('c0').apply(lambda x: ','.join(sorted(x['c5a'] + ':' + x['c5b']))).reset_index()
-    
-    
-    result.rename(columns={0: 'c5'}, inplace=True)
-    
-    return result.set_index('c0')
+    df = pd.read_csv('../files/input/tbl2.tsv', sep='\t')
+
+    # Crear una columna combinando c5a y c5b como string
+    df['c5'] = df['c5a'] + ':' + df['c5b'].astype(str)
+    # Agregación por c0 y separación por ','
+    result = df.groupby('c0')['c5'].apply(lambda x: ','.join(sorted(x))).reset_index()
+    result.set_index('c0', inplace=True)
+    return result
 
 print(pregunta_12())
