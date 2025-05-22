@@ -20,7 +20,6 @@ def pregunta_01():
     # Carga de archivo
     df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
-    # Se cuenta la cantidad de filas
     num_rows = df.shape[0]
 
     return num_rows

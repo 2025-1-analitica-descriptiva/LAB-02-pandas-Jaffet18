@@ -25,7 +25,7 @@ def pregunta_10():
     # Carga del archivo
     df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
-    # Agregación por c1 y separación por :
+    # Agrupación por 'c1' y creación de la lista separada por ':'
     result = df.groupby('c1')['c2'].apply(lambda x: ':'.join(map(str, sorted(x)))).reset_index()
 
     result.rename(columns={'c2': 'c2'}, inplace=True)

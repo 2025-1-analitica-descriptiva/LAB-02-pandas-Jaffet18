@@ -25,7 +25,7 @@ def pregunta_05():
     # Cargar el archivo tbl0.tsv
     df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
-    # Calcular el valor máximo de c2 por cada letra en la columna c1
+    # Agrupar por la columna 'c1' y calcular el valor máximo de 'c2'
     max_by_letter = df.groupby('c1')['c2'].max()
 
     return max_by_letter

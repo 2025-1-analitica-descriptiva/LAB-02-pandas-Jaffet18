@@ -20,7 +20,6 @@ def pregunta_06():
     # Cargar el archivo tbl1.csv
     df = pd.read_csv('./files/input/tbl1.tsv', sep='\t')
 
-    # Obtener los valores únicos de la columna c4, convertir a mayúsculas y ordenar alfabéticamente
     unique_values = sorted(df['c4'].str.upper().unique())
 
     return unique_values

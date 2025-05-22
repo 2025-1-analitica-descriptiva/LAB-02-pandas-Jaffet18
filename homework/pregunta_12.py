@@ -29,6 +29,7 @@ def pregunta_12():
      # Agregación por c0 y separación por ,
      result = df.groupby('c0').apply(lambda x: ','.join(sorted(x['c5a'] + ':' + x['c5b']))).reset_index()
      
+     
      result.rename(columns={0: 'c5'}, inplace=True)
      
      return result.set_index('c0')

@@ -25,7 +25,6 @@ def pregunta_04():
     # Cargar el archivo tbl0.tsv
     df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
-    # Calcular el promedio de c2 por cada letra de la c1
     mean_by_letter = df.groupby('c1')['c2'].mean()
 
     return mean_by_letter

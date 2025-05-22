@@ -25,7 +25,6 @@ def pregunta_07():
     # Cargar el archivo tbl0.tsv
     df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
-    # Calcular la suma de c2 por cada letra de la c1
     sum_by_letter = df.groupby('c1')['c2'].sum()
 
     return sum_by_letter

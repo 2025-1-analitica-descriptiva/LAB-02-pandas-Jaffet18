@@ -26,7 +26,7 @@ def pregunta_08():
 
      df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
      
-
+     # Agregar la columna 'suma' con la suma de 'c0' y 'c2'
      df['suma'] = df['c0'] + df['c2']
      
      return df
