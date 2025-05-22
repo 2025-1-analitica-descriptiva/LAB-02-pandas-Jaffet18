@@ -26,7 +26,8 @@ def pregunta_03():
     # Cargar el archivo tbl0.tsv
     df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
-    count_by_letter = df['c1'].value_counts()
+    # Contar la cantidad de registros por cada letra de la columna c1 y ordenar en orden alfabético
+    count_by_letter = df['c1'].value_counts().sort_index()
 
     return count_by_letter
 
