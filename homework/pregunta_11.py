@@ -31,6 +31,6 @@ def pregunta_11():
     
     result.rename(columns={'c4': 'c4'}, inplace=True)
     
-    return result.set_index('c0')
+    return result
 
 print(pregunta_11())
