@@ -23,15 +23,15 @@ def pregunta_12():
     39   39                    ggg:3,hhh:8,jjj:5
     """
 
-     # Carga del archivo
-     df = pd.read_csv('./files/input/tbl2.tsv', sep='\t')
-     
-     # Agregación por c0 y separación por ,
-     result = df.groupby('c0').apply(lambda x: ','.join(sorted(x['c5a'] + ':' + x['c5b']))).reset_index()
-     
-     
-     result.rename(columns={0: 'c5'}, inplace=True)
-     
-     return result.set_index('c0')
+    # Carga del archivo
+    df = pd.read_csv('./files/input/tbl2.tsv', sep='\t')
+    
+    # Agregación por c0 y separación por ,
+    result = df.groupby('c0').apply(lambda x: ','.join(sorted(x['c5a'] + ':' + x['c5b']))).reset_index()
+    
+    
+    result.rename(columns={0: 'c5'}, inplace=True)
+    
+    return result.set_index('c0')
 
 print(pregunta_12())
