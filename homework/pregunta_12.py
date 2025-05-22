@@ -24,7 +24,7 @@ def pregunta_12():
     """
 
     # Carga del archivo
-    df = pd.read_csv('../files/input/tbl2.tsv', sep='\t')
+    df = pd.read_csv('./files/input/tbl2.tsv', sep='\t')
 
     # Crear una columna combinando c5a y c5b como string
     df['c5'] = df['c5a'] + ':' + df['c5b'].astype(str)
