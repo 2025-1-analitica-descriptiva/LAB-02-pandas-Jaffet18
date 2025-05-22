@@ -22,15 +22,15 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-     # Carga del archivo
-     df = pd.read_csv('./files/input/tbl1.tsv', sep='\t')
-     
-     # Agregación por c0 y separación por ,
-     result = df.groupby('c0')['c4'].apply(lambda x: ','.join(sorted(set(x)))).reset_index()
-     
-     
-     result.rename(columns={'c4': 'c4'}, inplace=True)
-     
-     return result.set_index('c0')
+    # Carga del archivo
+    df = pd.read_csv('./files/input/tbl1.tsv', sep='\t')
+    
+    # Agregación por c0 y separación por ,
+    result = df.groupby('c0')['c4'].apply(lambda x: ','.join(sorted(set(x)))).reset_index()
+    
+    
+    result.rename(columns={'c4': 'c4'}, inplace=True)
+    
+    return result.set_index('c0')
 
 print(pregunta_11())
