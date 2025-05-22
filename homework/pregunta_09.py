@@ -28,7 +28,7 @@ def pregunta_09():
     df = pd.read_csv('./files/input/tbl0.tsv', sep='\t')
 
     # Convertir la columna 'c3' a tipo datetime
-    df['Año'] = df['c3'].str.split('-').str[0]
+    df['year'] = df['c3'].str.split('-').str[0]
 
     # Extraer el año y agregarlo como una nueva columna
     # df['year'] = df['c3'].dt.year
